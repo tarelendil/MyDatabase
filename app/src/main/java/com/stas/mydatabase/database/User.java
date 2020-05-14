@@ -5,8 +5,14 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class User {
-    @PrimaryKey
+public class User extends BaseEntity {
+    public User(byte[] crc, String firstName, String lastName) {
+        super(crc);
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    @PrimaryKey(autoGenerate = true)
     public int uid;
 
     @ColumnInfo(name = "first_name")

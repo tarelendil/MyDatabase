@@ -20,4 +20,8 @@ public class DatabaseManager {
         appDatabase = Room.databaseBuilder(App.getAppContext(),
                 AppDatabase.class, "AppDatabase").build();
     }
+
+    public void insertUser() {
+        appDatabase.userDao().insertAll(new User(new byte[]{1, 2, 3}, "vashe", "huina"));
+    }
 }
