@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.stas.mydatabase"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -46,11 +46,14 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // For Kotlin use kapt instead of annotationProcessor
 //    annotationProcessor "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
-
-
-    implementation "net.zetetic:android-database-sqlcipher:4.4.0"
-    implementation "androidx.sqlite:sqlite:2.1.0"
+//    implementation "com.google.auto.value:auto-value-annotations:1.6.5"
+//    kapt "com.google.auto.value:auto-value:1.6.5"
+//
+//    implementation "net.zetetic:android-database-sqlcipher:4.4.0"
+//    implementation "androidx.sqlite:sqlite:2.1.0"
 
 }
